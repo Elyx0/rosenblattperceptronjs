@@ -1,0 +1,111 @@
+body {
+  font-family: 'Mada', sans-serif;
+  text-align: center;
+}
+
+
+[v-cloak] { display:none; }
+
+button,a {
+  border-width: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+svg#mainsvg {
+  max-width: 560px;
+  background: rgba(0,0,0,.8);
+  border-radius: 5px;
+  text {
+  fill: grey;
+  font-family: 'Mada', sans-serif;
+}
+}
+line {
+  stroke: #555;
+  stroke-width: 2px;
+}
+
+
+.xaxis {
+  transform: translate(25px, 370px);
+}
+
+.yaxis {
+  transform: translate(25px, 20px) rotate(90deg);
+}
+
+.points {
+  transform: translate(25px, 370px);
+}
+
+.linear {
+  transform: translate(25px, 370px) rotateX(180deg);
+  line {
+    stroke-dasharray: 2px;
+    stroke: #9e9e9e;
+    stroke-width: 1px;
+  }
+}
+.shh {
+  opacity: .5;
+  font-size: .8em;
+}
+#app {
+  i {
+    background-color: beige; // #F0F0F0
+    color: #880000;
+    font-style: normal;
+    padding:.2em;
+    font-family: Consolas,monaco,monospace;
+    font-size: 1em;
+    &.positive {
+      color: #00cc00;
+    }
+    &.negative {
+      color: #cc0000;
+    }
+  }
+}
+.point {
+  transition: all .1s ease-in;
+  fill-opacity:0;
+  cursor: pointer;
+  &.reveal.predicted {
+    text {
+      transition: all .1s ease-in;
+      fill-opacity: 0;
+    }
+    &:hover {
+      text {
+        fill-opacity:1;
+      }
+    }
+    circle {
+    stroke-width:1px;
+    stroke:#ffffff;
+    }
+  }
+  circle {
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    r:10;
+  }
+  text {
+    transition: all .1s ease-in;
+    fill-opacity:0;
+  }
+  &:hover {
+    circle {
+      r:5;
+    }
+  }
+  &.reveal {
+    fill-opacity:1;
+    circle {
+      r:3;
+    }
+    text {
+      fill-opacity:1;
+    }
+  }
+}
