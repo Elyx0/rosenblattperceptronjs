@@ -4,7 +4,7 @@ DEMO: https://rosenblattperceptron.herokuapp.com/
 ### Training of a Perceptron in the Browser with Vue.js & SVG.
 
 This is a demonstration of training a perceptron to categorize entities between friendly or not according
-to 2 features, teeth and size. 
+to 2 features, teeth and size.
 
 <br/>
 
